@@ -4,7 +4,8 @@ A little demo game written in C for DOS (VGA only).
 I wrote this aiming at a 2D platformer style.
 I may pick this up occasionally or never again.
 
-![A little GIF of the game. It's not laggy when you play it!](game-demo.gif)
+![A little GIF of the game](game-demo.gif)
+Behold the above GIF. It's not laggy when you play it!
 
 This is just a side project, have a look or use whatever code if you want.
 Written and compiled using Borland Turbo C on DOSBox.
