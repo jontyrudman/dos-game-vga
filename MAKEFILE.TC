@@ -1,0 +1,26 @@
+MODEL=l
+CC=TCC
+LD=TCC
+NAME=GAME
+CFLAGS=-G -Z -m$(MODEL)
+LDFLAGS=-m$(MODEL) -f-
+
+all: $(NAME)
+
+.c.obj:
+	$(CC) -c $(CFLAGS) $*.c
+
+main.obj: main.c types.h timer.h input.h
+
+input.obj: input.c types.h
+
+timer.obj: timer.c types.h
+
+entity.obj: entity.c entity.h
+
+$(NAME): main.obj input.obj timer.obj entity.obj
+	$(LD) -e$(NAME) $(LDFLAGS) main.obj input.obj timer.obj entity.obj
+
+clean:
+	-del *.obj
+	-del *.exe
